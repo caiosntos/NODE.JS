@@ -1,0 +1,15 @@
+{
+  "name": "ot2_node",
+  "version": "1.0.0",
+  "main": "lerAqruivo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}
