@@ -2,6 +2,8 @@ const express = require("express");
 
 const app = express();
 
+app.use(express.json());
+
 let games = [
     {title:"Sea of Thieves", studio:"Rare", price: 30},
     {title:"WOW", studio:"Blizzard", price: 120},
@@ -22,3 +24,19 @@ app.listen(3080,() => {
 app.get("/", (req,res) => {
     res.json(games);
 })
+
+app.post("/novogame", (req, res) =>{
+    let title = req.body.title;
+    let studio = req.body.studio;
+    let price = req.body.price;
+
+    console.log(title);
+    console.log(studio);
+    console.log(price);
+
+    let newGame = {title, studio, price};
+
+    games.push(newGame);
+
+    res.send("OK");
+});
